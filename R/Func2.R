@@ -10,36 +10,36 @@
 #' @author Darius <dcuthbert1@usf.edu>
 #' @export
 #' @examples
-#' brandSize('Woman', 'Fendi', 9)
-#' brandSize('Woman', 'givenchy', 7)
+#' brandSize('woman', 'Fendi', 9)
+#' brandSize('woman', 'givenchy', 7)
 
-brandSize<-function(whoShoe="Woman", brand="alexander mcqueen", size = 0){
+brandSize<-function(whoShoe="woman", brand="alexander mcqueen", size = 0){
   whoShoe <-trimws(tolower(whoShoe))
   brand <- trimws(tolower(brand))
   bSize = 0
   #Start with getting Womans known shoe size.
-  if (whoShoe == "Woman"){
-    oSize = seq(4,12,0.5)
+  if (whoShoe == "woman"){
+    oSize = seq(33.5,42,0.5)
 
     #Change sequence range when needed between brands based on available shoe sizes.
     if (brand == "alexander mcqueen"|| brand == "mcq"){
-      brandSeq1 = seq(34,41,0.5)
+      brandSeq1 = seq(4,11,0.5)
       bSize = converter(size, brandSeq1, oSize)
     }
     if (brand== "fendi"){
-      brandSeq2 = seq(34,40.5,0.5)
+      brandSeq2 = seq(3.5,10,0.5)
       bSize = converter(size, brandSeq2, oSize)
     }
     if (brand== "givenchy"){
-      brandSeq3 = seq(34,42,0.5)
+      brandSeq3 = seq(3.5,11.5,0.5)
       bSize = converter(size, brandSeq3, oSize)
     }
     if (brand== "stuart weitzman"||brand=="sw"||brand=="weitzman"){
-      brandSeq4 = seq(33.5,42,0.5)
+      brandSeq4 = seq(4,11,0.5)
       bSize = converter(size, brandSeq4, oSize)
     }
     if (brand== "tom ford"||brand=="tf"|brand=="ford tom"){
-      brandSeq5 = seq(35,41,0.5)
+      brandSeq5 = seq(5,11,0.5)
       bSize = converter(size, brandSeq5, oSize)
     }
   }
@@ -48,12 +48,8 @@ brandSize<-function(whoShoe="Woman", brand="alexander mcqueen", size = 0){
     return("Unfortunately, at this time this package only contains the top 5 brands that will be shopped at on vacation")
   }
 
-  if (whoShoe %in% c('Woman')== FALSE){
+  if (whoShoe %in% c('woman')== FALSE){
     return ("Sorry no Men or Kids allowed on this vacation")
-  }
-
-  if (bSize ==0||size==0){
-    return("It is impossible for anyone to have a shoe size of 0, try again!")
   }
 
   else{
