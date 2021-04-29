@@ -29,6 +29,6 @@ brandChecker<-function(brand ="alexander mcqueen"){
     return(knitr::include_graphics("R/images/Checker5.png"))
   }
   if (brand %in% c("alexander mcqueen","fendi","givenchy","stuart weitzman", "tom ford") == FALSE){
-    return("UPlease check spelling of brand, only accepts full company name, no abbreviations or accronyms")
+    return("Please check spelling of brand, only accepts full company name, no abbreviations or accronyms")
   }
 }
