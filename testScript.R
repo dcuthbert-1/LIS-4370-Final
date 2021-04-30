@@ -3,6 +3,9 @@ library(dBrandsConvert)
 
 
 # No data for testing, must enter it manually. If attempting
+brandSize('woman', 'mcq', 10)
+brandSize('woman', 'givenchy', 7.5)
+
 brandSize('woman', 'Fendi', 7)
 brandSize('woman', 'givenchy', 7)
 brandSize('woman', 'mcq', 7)
